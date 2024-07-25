@@ -17,21 +17,19 @@ export default defineConfig({
 		sidebar: [
 			{
 				label: 'Introduction',
-				items: [
-					{
-						label: 'Conventions',
-						slug: 'introduction/conventions'
-					}
-				]
+				autogenerate: { directory: 'introduction' }
 			},
 			{
 				label: 'Components',
-				items: [
-					{
-						label: 'Accordion',
-						slug: 'components/accordion'
-					}
-				]
+				autogenerate: { directory: 'components' }
+			},
+			{
+				label: 'Conquest Table',
+				autogenerate: { directory: 'table' }
+			},
+			{
+				label: 'Conquest Chart',
+				autogenerate: { directory: 'chart' }
 			},
 		]
 	}), vue()]
