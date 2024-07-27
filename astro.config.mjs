@@ -1,36 +1,40 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-
 import vue from "@astrojs/vue";
+import tailwind from "@astrojs/tailwind";
 
+// https://astro.build/config
 export default defineConfig({
-	integrations: [starlight({
-		title: 'Conquest',
-		// logo: {
-			// light:
-			// dark:
-		// 	src: '/logo.png',
-		// },
-		social: {
-			github: 'https://github.com/jdw5/conquest'
-		},
-		sidebar: [
-			{
-				label: 'Introduction',
-				autogenerate: { directory: 'introduction' }
-			},
-			{
-				label: 'Components',
-				autogenerate: { directory: 'components' }
-			},
-			{
-				label: 'Conquest Table',
-				autogenerate: { directory: 'table' }
-			},
-			{
-				label: 'Conquest Chart',
-				autogenerate: { directory: 'chart' }
-			},
-		]
-	}), vue()]
+  integrations: [starlight({
+    title: 'Conquest',
+    // logo: {
+    // light:
+    // dark:
+    // 	src: '/logo.png',
+    // },
+    social: {
+      github: 'https://github.com/jdw5/conquest'
+    },
+    sidebar: [{
+      label: 'Introduction',
+      autogenerate: {
+        directory: 'introduction'
+      }
+    }, {
+      label: 'Components',
+      autogenerate: {
+        directory: 'components'
+      }
+    }, {
+      label: 'Conquest Table',
+      autogenerate: {
+        directory: 'table'
+      }
+    }, {
+      label: 'Conquest Chart',
+      autogenerate: {
+        directory: 'chart'
+      }
+    }]
+  }), vue(), tailwind()]
 });
