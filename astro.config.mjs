@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
+import Icons from 'unplugin-icons/vite';
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,7 +24,7 @@ export default defineConfig({
     }, {
       label: 'Components',
       autogenerate: {
-        directory: 'components'
+        directory: 'ui'
       }
     }, {
       label: 'Conquest Table',
@@ -36,5 +37,12 @@ export default defineConfig({
         directory: 'chart'
       }
     }]
-  }), vue(), tailwind()]
+  }), vue(), tailwind()],
+  // {
+  vite: {
+    plugins: [
+      // Your compiler here
+      Icons({ compiler: 'vue3' }),
+    ]
+  }
 });

@@ -1,0 +1,5 @@
+export { default as Heading } from './Heading.vue'
+export { default as Text } from './Text.vue'
+export { default as Muted } from './Muted.vue'
+export { default as Accent } from './Accent.vue'
+export { default as Money } from './Money.vue'
